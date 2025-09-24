@@ -12,8 +12,8 @@ The goal is to monitor key security events, such as login attempts, file operati
 
 ## ✨ Features
 
--   [cite_start]**Synthetic Log Generation**: A Python script (`synthetic_logs.py`) generates continuous, syslog-style security event logs.
--   [cite_start]**Containerized Deployment**: The entire ELK stack is orchestrated with Docker Compose for easy, one-command setup and teardown.
+-   **Synthetic Log Generation**: A Python script (`synthetic_logs.py`) generates continuous, syslog-style security event logs.
+-   **Containerized Deployment**: The entire ELK stack is orchestrated with Docker Compose for easy, one-command setup and teardown.
 -   **Data Processing Pipeline**: Logstash ingests the logs and uses a Grok filter to parse the unstructured text into structured, queryable fields.
 -   **Interactive Dashboard**: A Kibana dashboard provides at-a-glance visualizations for:
     -   Total event counts
@@ -75,6 +75,6 @@ The goal is to monitor key security events, such as login attempts, file operati
 
 ## 🔧 Configuration Details
 
--   [cite_start]**`docker-compose.yml`**: Defines the three services (Elasticsearch, Logstash, Kibana), their networking, and volume mounts for data persistence and configuration.
+-   **`docker-compose.yml`**: Defines the three services (Elasticsearch, Logstash, Kibana), their networking, and volume mounts for data persistence and configuration.
 -   **`logstash/pipeline/soc.conf`**: Configures the Logstash pipeline. It uses the `file` input to read `synthetic_logs.log`, the `grok` filter to parse the messages, and outputs to both Elasticsearch and the console for debugging.
--   [cite_start]**`synthetic_logs.py`**: A simple, standalone script that generates random syslog-formatted messages and writes them to `synthetic_logs.log`.
+-   **`synthetic_logs.py`**: A simple, standalone script that generates random syslog-formatted messages and writes them to `synthetic_logs.log`.
