@@ -44,7 +44,7 @@ The goal is to monitor key security events, such as login attempts, file operati
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/ethalkunal/personal-soc-dashboard.git](https://github.com/ethalkunal/personal-soc-dashboard.git)
+    git clone https://github.com/ethalkunal/personal-soc-dashboard.git
     cd personal-soc-dashboard
     ```
 
